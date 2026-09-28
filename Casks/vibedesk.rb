@@ -9,7 +9,7 @@ cask "vibedesk" do
   homepage "https://turingworks.github.io/vibecody"
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "VibeDesk.app"
 
