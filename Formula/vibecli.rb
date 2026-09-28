@@ -1,7 +1,6 @@
 class Vibecli < Formula
   desc "VibeCody terminal AI assistant — daemon + CLI"
   homepage "https://turingworks.github.io/vibecody"
-  version "0.5.14"
   license "MIT"
 
   on_macos do
