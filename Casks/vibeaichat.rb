@@ -1,14 +1,17 @@
 cask "vibeaichat" do
-  version "0.5.14"
-  sha256 arm:   "5392cbfecbe3ed8b7fda26bc81256df80abccf259f79653cf2a1e7c19833ad7c",
-         intel: "cd8b5efe95ed5cdc3d93dfb30ff79751f91fdf0aa2554812e4aa2bb266092512"
+  version "0.5.15"
+  sha256 arm:   "42cac33eeb346e2d4bf8aa134a2c5fae090e4aef0f9aa159023408de6f46ccf0",
+         intel: "ac3c875ff2b8f2478c48c2c49b07356ec2ed831eaa2c994041fc49bbf0ad1e63"
 
+  # Bare `arch` returns nil (it only takes arm:/intel: keywords), so a
+  # ternary on it always picked the Intel DMG and failed arm64 checksums.
   on_arm do
-    url "https://pub-7b2b5d95046f46899a442da12aa33de8.r2.dev/v0.5.14/VibeAIChat_0.5.14_aarch64.dmg"
+    url "https://pub-7b2b5d95046f46899a442da12aa33de8.r2.dev/v0.5.15/VibeAIChat_0.5.15_aarch64.dmg"
   end
   on_intel do
-    url "https://pub-7b2b5d95046f46899a442da12aa33de8.r2.dev/v0.5.14/VibeAIChat_0.5.14_x64.dmg"
+    url "https://pub-7b2b5d95046f46899a442da12aa33de8.r2.dev/v0.5.15/VibeAIChat_0.5.15_x64.dmg"
   end
+
   name "VibeAIChat"
   desc "VibeCody desktop AI assistant"
   homepage "https://turingworks.github.io/vibecody"

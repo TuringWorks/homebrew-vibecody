@@ -1,14 +1,17 @@
 cask "vibecoder" do
-  version "0.5.14"
-  sha256 arm:   "f779ecd8c31beeb52dbe8eef2f206b2e85d7fb714a17e739dba4e16439f3f275",
-         intel: "aa56e69fe1270772425df1e1067a87cf64ba17e65a3c2620b18d9c9be244fa80"
+  version "0.5.15"
+  sha256 arm:   "6285a1228f4f27c8b0e6ec36d760af01b2033db3109efc1ec6694f48fbe542cc",
+         intel: "ffc39f8bc8f1bb96b9a3451b13f7870e3c6b6ea76b110f75c8101ead310a2a1b"
 
+  # Bare `arch` returns nil (it only takes arm:/intel: keywords), so a
+  # ternary on it always picked the Intel DMG and failed arm64 checksums.
   on_arm do
-    url "https://pub-7b2b5d95046f46899a442da12aa33de8.r2.dev/v0.5.14/VibeCoder_0.5.14_aarch64.dmg"
+    url "https://pub-7b2b5d95046f46899a442da12aa33de8.r2.dev/v0.5.15/VibeCoder_0.5.15_aarch64.dmg"
   end
   on_intel do
-    url "https://pub-7b2b5d95046f46899a442da12aa33de8.r2.dev/v0.5.14/VibeCoder_0.5.14_x64.dmg"
+    url "https://pub-7b2b5d95046f46899a442da12aa33de8.r2.dev/v0.5.15/VibeCoder_0.5.15_x64.dmg"
   end
+
   name "VibeCoder"
   desc "VibeCody desktop code editor"
   homepage "https://turingworks.github.io/vibecody"
