@@ -1,15 +1,15 @@
 cask "vibeaichat" do
-  version "0.5.15"
-  sha256 arm:   "42cac33eeb346e2d4bf8aa134a2c5fae090e4aef0f9aa159023408de6f46ccf0",
-         intel: "ac3c875ff2b8f2478c48c2c49b07356ec2ed831eaa2c994041fc49bbf0ad1e63"
+  version "0.5.19"
+  sha256 arm:   "81b39463eca6c9f957d0468979da94c758dead26b63167963dc15cdad9ee6fd5",
+         intel: "5e481bc68030b2a485a011873892395b719dab84f24da9c6b4a4a7937fd3d326"
 
   # Bare `arch` returns nil (it only takes arm:/intel: keywords), so a
   # ternary on it always picked the Intel DMG and failed arm64 checksums.
   on_arm do
-    url "https://pub-7b2b5d95046f46899a442da12aa33de8.r2.dev/v0.5.15/VibeAIChat_0.5.15_aarch64.dmg"
+    url "https://vibecody.online/dl/v0.5.19/VibeAIChat_0.5.19_aarch64.dmg"
   end
   on_intel do
-    url "https://pub-7b2b5d95046f46899a442da12aa33de8.r2.dev/v0.5.15/VibeAIChat_0.5.15_x64.dmg"
+    url "https://vibecody.online/dl/v0.5.19/VibeAIChat_0.5.19_x64.dmg"
   end
 
   name "VibeAIChat"
